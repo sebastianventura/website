@@ -1,0 +1,49 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+{{ partial "header_image.html" . }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ .Title | default (i18n "activities") }}</h1>
+
+      {{ with .Content }}
+      <div class="article-style" itemprop="articleBody">{{ . }}</div>
+      {{ end }}
+
+      <p>
+        {{ i18n "filter_by_type" }}:
+        <select class="pub-filters-select">
+          <option value="*">{{ i18n "filter_all" }}</option>
+          {{ range $index, $taxonomy := .Site.Taxonomies.activity_types }}
+          <option value=".pubtype-{{ (int $index) }}">
+            {{ index $.Site.Params.activity_types (int $index) }}
+          </option>
+          {{ end }}
+        </select>
+      </p>
+
+      <div id="container-activities">
+        {{ range $key, $taxonomy := .Site.Taxonomies.activity_types }}
+          <h3>{{ index $.Site.Params.activity_types (int $key) }}</h3>
+          {{ range $taxonomy.Pages }}
+            {{ if .Params.activity_types }}
+              {{ $.Scratch.Set "acttype" (index .Params.activity_types 0) }}
+            {{ else }}
+              {{ $.Scratch.Set "acttype" 0 }}
+            {{ end }}
+            
+            <div class="grid-sizer col-md-12 isotope-item pubtype-{{ $.Scratch.Get "acttype" }}">
+              <i class="fa fa-briefcase" aria-hidden="true"
+                  style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>{{ .Params.Position }} of the {{ .Title }} {{ if .Params.To }} ({{ .Date.Format "2006" }} - {{ .Params.To.Format "2006" }}){{ else }}(started {{ .Date.Format "2006" }}){{ end }}
+              <p></p>
+            </div>
+          {{ end }}
+          </div>
+        {{ end }}
+    </div>
+  </div>
+</div>
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

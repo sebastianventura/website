@@ -1,0 +1,19 @@
++++
+title = "Mining exceptional relationships with grammar-guided genetic programming"
+date = "2016-01-01"
+authors = ["J. M. Luna","M. Pechenizkiy","S. Ventura"]
+publication_types = ["2"]
+publication = "_Knowledge and Information Systems_"
+publication_short = ""
+image_preview = ""
+selected = false
+projects = []
+url_pdf = "http://dx.doi.org/10.1007/s10115-015-0859-y"
+url_custom = [{name = "DOI", url = "http://dx.doi.org/10.1007/s10115-015-0859-y"}]
+math = true
+highlight = true
+[header]
+image = ""
+caption = ""
++++
+

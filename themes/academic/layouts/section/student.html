@@ -1,0 +1,45 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+{{ partial "header_image.html" . }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ .Title | default (i18n "students") }}</h1>
+
+      {{ with .Content }}
+      <div class="article-style" itemprop="articleBody">{{ . }}</div>
+      {{ end }}
+
+      <div id="container-students">
+        {{ range .Pages.ByDate.Reverse }}
+
+        {{ if .Params.ongoing }}
+        <div class="grid-sizer col-md-12 isotope-item pubtype-{{ $.Scratch.Get "stutype" }}">
+          <i class="fa fa-graduation-cap" aria-hidden="true"
+             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>{{ .Params.Author }} ({{with .Params.Ongoing}}started {{ end }}{{ .Date.Format "2006" }}) - {{ .Title }}
+          <p></p>
+        </div>
+        {{ end }}
+
+        {{ end }}
+
+        {{ range .Pages.ByDate.Reverse }}
+
+        {{ if not .Params.ongoing }}
+        <div class="grid-sizer col-md-12 isotope-item pubtype-{{ $.Scratch.Get "stutype" }}">
+          <i class="fa fa-graduation-cap" aria-hidden="true"
+             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>{{ .Params.Author }} ({{with .Params.Ongoing}}started {{ end }}{{ .Date.Format "2006" }}) - {{ .Title }}
+          <p></p>
+        </div>
+        {{ end }}
+
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</div>
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

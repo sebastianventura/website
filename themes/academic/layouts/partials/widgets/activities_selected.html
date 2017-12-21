@@ -1,0 +1,32 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+<!-- Selected Professional Activities widget -->
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+    <p class="view-all">
+      <a href="{{ "/activity/" | relLangURL }}">
+        {{ i18n "more_activities" | markdownify }}
+        <i class="fa fa-angle-double-right"></i>
+      </a>
+    </p>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    {{ with $page.Content }}<p>{{ . | markdownify }}</p>{{ end }}
+
+    {{ if $page.Params.detailed_list }}
+    {{ range (where (where $.Data.Pages "Type" "activity") ".Params.selected" true) }}
+    {{ partial "activity_li_simple" . }}
+    {{ end }}
+    {{ else }}
+    <ul class="fa-ul">
+      {{ range (where (where $.Data.Pages "Type" "activity") ".Params.selected" true) }}
+      {{ partial "activity_li_simple" . }}
+      {{ end }}
+    </ul>
+    {{ end }}
+
+  </div>
+</div>
