@@ -1,0 +1,6 @@
++++
+title = "New Models in Multi-label Classification for Problems with Heterogeneous Data. An Ensemble-Based Approach"
+date = "2013-10-04"
+author = "José María Moyano"
+ongoing = true
++++
