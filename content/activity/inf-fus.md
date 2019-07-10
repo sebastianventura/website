@@ -1,4 +1,5 @@
 +++ 
+
 title = "Information Fusion" date = "2019-01-01T11:09:53+01:00"
 
 Professional activity type.
@@ -23,4 +24,6 @@ position = "Editorial Board Member"
 
 Is this a selected professional activity? (true/false)
 
-selected = true +++
+selected = true 
+
++++
