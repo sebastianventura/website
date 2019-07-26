@@ -17,9 +17,10 @@ weight = 60
 I am a teaching instructor for the following courses at University of Córdoba:
 
 - Scientific Programming (BSc Physics)
-- Complex Data Mining (MSc Computer Science)
-- Web Intelligence (MSc Computer Science)
-- High Performance Programming (MSc Advanced Physics)
+# - Complex Data Mining (MSc Computer Science)
+# - Web Intelligence (MSc Computer Science)
+# - High Performance Programming (MSc Advanced Physics)
+- Metaheuristics (BSc Computing)
 
 and at Menéndez Pelayo International University:
 
