@@ -5,7 +5,7 @@ authors = ["S. Ventura","J. M. Luna"]
 publication_types = ["5"]
 publication_short = ""
 image_preview = ""
-selected = false
+selected = true
 projects = []
 url_pdf = "http://dx.doi.org/10.1007/978-3-319-33858-3"
 url_custom = [{name = "DOI", url = "http://dx.doi.org/10.1007/978-3-319-33858-3"}]
