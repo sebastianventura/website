@@ -19,13 +19,13 @@ defaultContentLanguageInSubdir = false
 
 [params]
   name = "Sebastián Ventura"
-  role = "Professor of Computer Sciences and Artificial Intelligence"
+  role = "Professor of Computing Sciences and Artificial Intelligence"
   organization = "University of Córdoba"
   organization_url = "http://www.uco.es"
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "main.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "sventura@uco.es"
-  address = "Department of Computers Science and Numerical Analysis. University of Córdoba. Campus of Rabanales, Albert Einstein building, 3rd floor"
+  address = "Department of Computer Science and Numerical Analysis. University of Córdoba. Campus of Rabanales, Albert Einstein building, 3rd floor"
   office_hours = ""
   phone = "+34-957212218"
   skype = ""
