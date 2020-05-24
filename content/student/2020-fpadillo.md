@@ -1,6 +1,6 @@
 +++
 title = "New Challenges in Associative Classification: Big Data and Applications"
-date = "2016-11-28"
+date = "2020-06-28"
 author = "Francisco Padillo"
-ongoing = true
+ongoing = false
 +++
