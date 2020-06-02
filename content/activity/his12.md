@@ -1,6 +1,7 @@
 +++
 title = "Twelve International Conference on Hybrid Intelligent System"
-date = "2012-01-01T11:11:15+01:00"
+date = "2012-12-04T11:11:15+01:00"
+toDate = "2012-12-07T11:11:15+01:00"
 
 # Professional activity type.
 # Legend:
