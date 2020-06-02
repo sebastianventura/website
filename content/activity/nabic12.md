@@ -1,6 +1,7 @@
 +++
 title = "Fourth World Congress on Nature and Bioinspired Computing"
-date = "2012-01-01T11:11:15+01:00"
+date = "2012-12-05T11:11:15+01:00"
+date = "2012-12-09T11:11:15+01:00"
 
 # Professional activity type.
 # Legend:
