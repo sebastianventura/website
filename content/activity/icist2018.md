@@ -1,6 +1,7 @@
 +++
 title = "Eighth International Conference on Information Science and Technology"
-date = "2018-07-01T11:11:15+01:00"
+date = "2018-06-30T11:11:15+01:00"
+toDate = "2018-07-06T11:11:15+01:00"
 
 # Professional activity type.
 # Legend:
